@@ -9,7 +9,7 @@ const schema = {
         circuits: {
             type: "array",
             minItems: 300,
-            items: { "$ref": "#/definitions/circuit" },
+            items: { "$ref": "#/definitions/circuit" }
         },
         providers: {
             type: "array",
@@ -21,10 +21,8 @@ const schema = {
         },
         customers: {
             type: "array",
-            minItems: 140,
-            items: {
-                $ref: "#/definitions/customer"
-            }
+            minItems: 25,
+            items: { "$ref": "#/definitions/customer" }
         }
     },
     definitions: {
@@ -32,9 +30,6 @@ const schema = {
             type: "object",
             required: ["cid", "provider"],
             properties: {
-                id: {
-                    $ref: "#/definitions/positiveInt"
-                },
                 cid: {
                     type: "string",
                     faker: "git.shortSha"
