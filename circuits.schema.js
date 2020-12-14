@@ -67,6 +67,7 @@ const schema = {
         },
         contactInfo: {
             type: "object",
+            required: ["email"],
             properties: {
                 email: {
                     type: "string",
