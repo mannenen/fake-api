@@ -28,7 +28,7 @@ const schema = {
     definitions: {
         circuit: {
             type: "object",
-            required: ["cid", "provider"],
+            required: ["cid", "provider", "customers"],
             properties: {
                 cid: {
                     type: "string",
@@ -54,7 +54,7 @@ const schema = {
         },
         customer: {
             type: "object",
-            required: ["name"],
+            required: ["name", "contact"],
             properties: {
                 name: {
                     type: "string",

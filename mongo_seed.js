@@ -42,7 +42,7 @@ MongoClient.connect(url, function(err, client) {
     const circuitCollection = db.collection("circuits");
 
     let circuits = [];
-    for (let i = 0; i < 5000; i += 1) {
+    for (let i = 0; i < 10; i += 1) {
         let circuit = {
             cid: faker.random.uuid(),
             provider: faker.company.companyName(),
